@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Template_files/w3.css">
+  <link rel="stylesheet" href="Template_files/css.css">
+  <link rel="stylesheet" href="Template_files/font-awesome.min.css">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif;
+    }
+
+    body,
+    html {
+      height: 100%;
+      color: #777;
+      line-height: 1.8;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+      background-image: url('/w3images/parallax1.jpg');
+      min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+      background-image: url("/w3images/parallax2.jpg");
+      min-height: 400px;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+      background-image: url("/w3images/parallax3.jpg");
+      min-height: 400px;
+    }
+
+    .w3-wide {
+      letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+      cursor: pointer;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    </div>
+
+  </div>
+
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">Image Signing</h3>
+    <p class="w3-center"><em>The Need for Container Image Signing</em></p>
+    <p>Trust is a major concern for containers. Container image signing allows users to add a digital “fingerprint” to an image. This fingerprint can later be cryptographically tested to verify trust. This allows users of container images to verify origin and trust the content included in container images.
+
+      Containers package code, binaries, and libraries into an image. Once the image is ready, it can be uploaded to a container registry and shared with others. When the image is shared, it is essentially anonymous—it is difficult to verify the content inside or its source without cryptographic signatures. 
+      
+      To make matters worse, container images are often made up of layers of images controlled by multiple people and teams. This makes it even more difficult to ascertain what exactly was included in each layer of the image. 
+      
+      The main goal for end-users of container images is to verify the chain of custody (CoC). They must establish a trust relationship with any team that added files to the container image. All layers of a container image must be trusted by end users—otherwise using the container image represents a security risk.</p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <p><b>Signature Verification Process</b></p><br>
+        <img src="Template_files/process.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+          alt="Photo" width="500" height="333">
+      </div>
+
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>In the signature verification process, the hash of the document or message is calculated and compared to the hash that is included in the signature. If the hashes match, it indicates that the document or message has not been tampered with, and that it is the same as the original document or message.
+
+          Hashing is an important security feature, as it allows the authenticity and integrity of a document or message to be verified without needing to store or transmit the entire document or message. In some cases, a timestamp might be used to indicate when the signature was created.</p>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
